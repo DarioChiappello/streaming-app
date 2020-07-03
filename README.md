@@ -4,3 +4,6 @@
 - NodeJS
 - Express
 - Socket.io
+
+### comand
+npm run dev
