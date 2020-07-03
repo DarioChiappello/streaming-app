@@ -7,3 +7,5 @@
 
 ### comand
 npm run dev
+
+### install Node, Express & Socket.io
