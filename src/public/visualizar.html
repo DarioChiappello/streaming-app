@@ -6,10 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streaming App</title>
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 
-<body>
-    <img id="play" src="">
+<body class="bg-primary">
+    <div class="container-fluid bg-dark text-white">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <h1 class="text-center" style="padding-top: 25px; padding-left: 20px;">Stream App</h1>
+            </li>
+            <li class="nav-item">
+                <img src="/img/logo.png" alt="logo" style="height: 120px; width: auto;">
+            </li>
+        </ul>
+
+    </div>
+    <br>
+    <div class="container-md center-block bg-dark text-white ">
+        <h1 class="text-center">Emisión en directo</h1>
+        <br>
+        <div class="col text-center">
+            <img id="play" src="">
+        </div>
+
+        <br>
+        <div class="container-fluid text-center">
+
+            <div class="status bg-success"></div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+    <br>
+
+    <footer class="page-footer font-small bg-dark text-white">
+
+
+        <div class="footer-copyright text-center py-3">
+            <h6>Desarrollado por Darío Chiappello</h6>
+        </div>
+
+
+    </footer>
+
     <script>
         var socket = io();
         socket.on('stream', (image) => {
