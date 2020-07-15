@@ -81,6 +81,7 @@
 
         var video = document.querySelector('#video');
 
+
         var socket = io();
 
         function showMessage(msg) {
@@ -99,6 +100,7 @@
         function showVideo(video, context) {
             context.drawImage(video, 0, 0, context.width, context.height);
             socket.emit('stream', canvas.toDataURL('image/webp'));
+
         }
 
         btn.addEventListener('click', () => {
